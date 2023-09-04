@@ -6,13 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <TextView
+       android:id="@+id/explore"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/explore_your_favorite_food"
+       android:textColor="@color/black"
+       android:textSize="24sp"
+       android:fontFamily="@font/yeon_sung"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_marginTop="@dimen/dp_45"
+       android:layout_marginStart="@dimen/dp_20"/>
 
+   <ImageButton
+       android:id="@+id/notification"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/baseline_notifications_active_24"
+       android:backgroundTint="@color/white"
+       android:layout_marginEnd="@dimen/dp_20"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="@id/explore"
+       app:layout_constraintBottom_toBottomOf="@id/explore"
+       android:contentDescription="@string/app_name"/>
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottomNav"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:menu="@menu/bottom_nav"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       />
 </androidx.constraintlayout.widget.ConstraintLayout>
